@@ -1,0 +1,88 @@
+<div>
+        <div class="row cp">
+            <h1>COMPARE</h1>
+            <!-- The left -->
+            <div class="col-6 sp1 sp2">
+                <div class="compare">
+                <!-- <span>Choose Brand</span> <br> -->
+                <select name="brand" id="brand" ng-click="get_brand_left()" class="chb center">
+                    <option class="center">---The first Brand---</option>
+                    <option value="Ray Ban">Ray Ban</option>
+                    <option value="Oakley">Oakley</option>
+                    <option value="Boss Hugo">Boss Hugo</option>   
+                    <option value="Gucci">Gucci</option>   
+                    <option value="Burberry" >Burberry</option> 
+                </select>
+                <br>
+                <br>  
+                <div>
+                    <!-- <span>Choose Glasses</span>  -->
+                <select name="item" id="item" ng-click="get_item_left()" class="cg center" >
+                    <option class="center">---The first item---</option>
+                    <option  ng-repeat="x in datalist | filter:  compare" ng-value="x.Img.Src.img1">
+                    {{x.Img.Brand.Name}}
+                    {{x.Img.Color}} {{x.Img.ID}}
+                    </option>
+                </select>
+                </div> 
+                <br> 
+                <input type="button" value="Filter" ng-click="filter_item_left()" class="cf btn-filter">
+                <div ng-show="show_compare">
+                <div ng-repeat="x in datalist | filter: item" class="cp1">
+                    <div>
+                        <img ng-src="{{x.Img.Src.img2}}" alt="" width="100%" class="image12">
+                    </div>
+                    <p> <span>Name: </span>{{x.Img.Brand.Name}}</p> 
+                    <p><span>Color: </span>{{x.Img.Color}} {{x.Img.ID}}</p> 
+                    <p><span>Year: </span>{{x.Img.Year}}</p>
+                    <p><span>Type: </span>{{x.Img.Type}}</p>
+                    <p><span>Price: </span>{{x.Img.Price}} USD</p>
+                </div>
+            </div>
+                </div>              
+            </div>
+            <!-- End the left -->
+            <!-- The right -->
+            <div class="col-6 sp1">
+                <div class="compare">
+                <!-- <span>Choose Brand</span> <br> -->
+                <select name="brand1" id="brand1" ng-click="get_brand_right()" class="chb center">
+                    <option class="center">---The second Brand---</option>
+                    <option value="Ray Ban" >Ray Ban</option>
+                    <option value="Oakley">Oakley</option>
+                    <option value="Boss Hugo">Boss Hugo</option>   
+                    <option value="Gucci">Gucci</option>   
+                    <option value="Burberry" >Burberry</option> 
+                </select>
+                <br>
+                <br>
+                <div>
+                    <!-- <span>Choose Glasses</span>     -->
+                <select name="item1" id="item1" ng-click="get_item_right()" class="cg center">
+                    <option value="" class="center">---The second item---</option>
+                    <option  ng-repeat="x in datalist | filter:  compare1" ng-value="x.Img.Src.img1">{{x.Img.Brand.Name}} {{x.Img.Color}} {{x.Img.ID}} </option>
+                </select>
+                </div>
+                <br> 
+                <input type="button" value="Filter" ng-click="filter_item_right()" class="cf btn-filter">
+                <div ng-show="show_compare1">
+                    <div ng-repeat="x in datalist | filter: item1" class="cp1">
+                        <img ng-src="{{x.Img.Src.img2}}" alt="" width="100%" class="image12">
+                        <p><span>Name: </span>{{x.Img.Brand.Name}}</p> 
+                        <p><span>Color: </span>{{x.Img.Color}} {{x.Img.ID}}</p>
+                        <p><span>Year: </span>{{x.Img.Year}}</p>
+                        <p><span>Type: </span>{{x.Img.Type}}</p>
+                        <p><span>Price: </span>{{x.Img.Price}} USD</p>
+                    </div>
+                </div>
+                
+                </div>
+                
+            </div>
+        </div>
+        <div>
+            <div class="slide first" ng-repeat="x in datalist | filter: 'baner': true">
+                <img ng-src="{{x.Banner.img}}" alt="" />
+              </div>
+        </div>
+</div>
