@@ -353,11 +353,14 @@
                             <div class="">
                                 <div class="footer-h2">INFORMATION</div>
                                 <ul class="home_ul">
-                                    <li ng-click="menu_ab('Policy')"><a class="footer-item" 
+                                    <li ><a class="footer-item" 
                                         href="index.html#!/about#Policy" rel="nofollow"
-                                        ng-class="{ active_menu: show_Policy==true && activePath=='/about'}">Privacy Policy</a></li>
-                                    <li ng-click="menu_ab('Terms')"><a class="footer-item" 
+                                         ng-click="menu_ab('Policy')"
+                                        ng-class="{ active_menu: show_Policy==true && activePath=='/about'}"
+                                            >Privacy Policy</a></li>
+                                    <li ><a class="footer-item" 
                                         href="index.html#!/about#Terms" rel="nofollow"
+                                           ng-click="menu_ab('Terms')"
                                         ng-class="{ active_menu: show_Terms==true && activePath=='/about'}">Usage Agreement</a></li>
                                 </ul>
                             </div>
