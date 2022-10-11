@@ -35,7 +35,7 @@
     },
     {
         "Type": "banner",
-        "img": "../img/bannerlist/BOSS_PF20_Toronto_keyvisual_Landscape-scaled.jpg",
+        "img": "img/bannerlist/BOSS_PF20_Toronto_keyvisual_Landscape-scaled.jpg",
         "KeyWord": "Boss-Hugo",
         "p1": "HUGO BOSS GLASSES",
         "p2": "AUTHENTIC HUGO BOSS STORE",
@@ -44,7 +44,7 @@
     },
     {
         "Type": "banner",
-        "img": "../img/bannerlist/guccibanner.jpg",
+        "img": "img/bannerlist/guccibanner.jpg",
         "KeyWord": "Gucci",
         "p1": "GUCCI GLASSES",
         "p2": "AUTHENTIC GUCCI STORE",
@@ -53,7 +53,7 @@
     },
     {
         "Type": "banner",
-        "img": "../img/bannerlist/Burberry-eyewear-Autumn-Winter-2014-campaign.jpg",
+        "img": "img/bannerlist/Burberry-eyewear-Autumn-Winter-2014-campaign.jpg",
         "KeyWord": "Burberry",
         "p1": "BUBERRY GLASSES",
         "p2": "AUTHENTIC BUBERRY STORE",
@@ -71,7 +71,7 @@
     },
     {
         "Type": "banner",
-        "img": "../img/bannerlist/Glasses_Banner.webp",
+        "img": "img/bannerlist/Glasses_Banner.webp",
         "KeyWord": "Glasses",
         "p1": "Glasses",
         "p2": "AUTHENTIC STORE",
@@ -80,7 +80,7 @@
     },
     {
         "Type": "banner",
-        "img": "../img/bannerlist/Contact_lens_banner.png",
+        "img": "img/bannerlist/Contact_lens_banner.png",
         "KeyWord": "Contact lens",
         "p1": "Contact lens",
         "p2": "AUTHENTIC STORE",       
