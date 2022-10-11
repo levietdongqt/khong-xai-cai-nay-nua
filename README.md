@@ -24,7 +24,7 @@ eProject published at
 
 ============================
 
-eProject video published at 
+eProject video published at
 
 ============================
 
