@@ -62,7 +62,7 @@
     },
     {
         "Type": "banner",
-        "img": "../img/bannerlist/SunGlasses_Banner.jpg",
+        "img": "img/bannerlist/SunGlasses_Banner.jpg",
         "KeyWord": "SunGlasses",
         "p1": "SunGlasses",
         "p2": "AUTHENTIC STORE",
