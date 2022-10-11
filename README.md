@@ -16,11 +16,11 @@ Group members Name Student ID
  
 ============================
 
-eProject documentation at 
+eProject documentation at: https://github.com/levietdongqt/Group2/tree/main/Review
 
 ============================
 
-eProject published at 
+eProject published at: https://levietdongqt.github.io/Group2/#!/
 
 ============================
 
