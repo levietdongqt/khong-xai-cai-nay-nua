@@ -1,7 +1,7 @@
 
 
 .br{
-    height: auto;
+    height: 100vh;
     background: url(../img/Form_backgroup.jpg);
     /* background: #382e498f; */
     background-position: right;
@@ -17,7 +17,6 @@
     display: flex;
     justify-content: center;
     /* align-items: center; */
-   
 
 }
 
@@ -32,8 +31,8 @@
 .bt .btnab{
 position: relative;  
  width: 155px; 
- height: 50px;
- margin: 10px;   
+height: 30px;   
+
 }
 
 .bt .btnab a{
@@ -41,7 +40,7 @@ position: relative;
  top: 0;
  left: 0;
  width: 100%;
- height: 100%;
+ height: auto;
  display:flex;
  justify-content: center;
  align-items: center;
@@ -50,7 +49,6 @@ box-shadow: 0 15px 35px rgb(0, 0, 0,0.2);
 border-top: 1px solid rgba(255, 255, 255, 0.1);
 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 border-radius: 30px;
-z-index: 1;
 color: rgb(59, 55, 55);
 font-weight:600;
 letter-spacing: 1px;
@@ -341,7 +339,7 @@ section::after{
 
 .error{
     color: red;
-    text-align: center;}
+    margin-top: 50px;}
 
  /* KẾT THÚC FORM CONTACT */
 .about_p{
