@@ -1,0 +1,52 @@
+
+.cart_img1{
+    width: 80%;
+    padding-left: 10%;
+}
+.cart_text{
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2em;
+}
+.cart_text1{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.cart_text2{
+    font-size: 1em;
+    font-weight: bold;
+    opacity: 0.8;
+}
+.cart_label{
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.cart_form{
+    width: 60%;
+    margin: 0% auto;
+}
+.cart_show{
+    margin: 2% 0%;
+}
+.msg{
+    color: red;
+    opacity: 0.6;
+    font-size: 1em;
+}
+.cart-quati{
+    width: 10%;
+}
+.cart_delete{
+    margin-top: 2%;
+    margin-bottom: 0%;
+    color: aliceblue;
+    border-radius: 17px;
+    background-color: #FF3333;
+    border: none;
+    width: auto;
+    padding: 1% 4%;
+}
+.cart_delete:hover{
+    background-color: #FF3366;
+}
