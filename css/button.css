@@ -1,0 +1,374 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+.snip0072 {
+    font-family: 'Raleway', Arial, sans-serif;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    padding: 20px 40px;
+    display: inline-block;
+    margin: 15px 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 1em;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+  }
+  .snip0072:before {
+    border-radius: 3px;
+    content: '';
+    display: block;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 50%;
+    bottom: 50%;
+    background-color: #ffffff;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+    opacity: 0;
+    -webkit-transition: all 0.1s;
+    transition: all 0.4s;
+    -webkit-transition-delay: 0.1s;
+    transition-delay: 0.1s;
+  }
+  
+  .snip0072:hover,
+  .snip0072.hover {
+    color: red;
+    -webkit-animation: flashText 0.5s;
+    animation: flashText 0.3s;
+  }
+  
+  .snip0072:hover:before,
+  .snip0072.hover:before {
+    top: 15%;
+    bottom: 15%;
+    background-color: rgba(255, 255, 255, 0.1);
+    opacity: 0.8;
+  }
+  
+  .snip0072:active:before {
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  
+  .snip0072.blue {
+    background-color: #1e5d87;
+  }
+  .snip0072.red {
+    background-color: #8e2a20;
+  }
+  
+  .snip0072.yellow {
+    background-color: #b66015;
+  }
+  
+  @-webkit-keyframes flashText {
+    0% {
+      color: green;
+    }
+    50% {
+      color: transparent;
+    }
+    100% {
+      color: red;
+    }
+  }
+  
+  @keyframes flashText {
+    0% {
+      color: green;
+    }
+    50% {
+      color: transparent;
+    }
+    100% {
+      color: red;
+    }
+  }
+  /*---> Button Add to Cart <----*/ 
+
+  button.add_cart {
+    font-family: 'Raleway', Arial, sans-serif;
+    border: none;
+    background-color: #000000;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 40px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    line-height: 1.5em;
+    font-weight: 500;
+    font-size: 1em;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  button.add_cart span {
+    display: inline-block;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    opacity: 0.8;
+  }
+  button.add_cart i {
+    font-size: 22px;
+    right: 15px;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  button.add_cart:before {
+    content: '';
+    top: 0;
+    right: 0;
+    width: 0;
+    position: absolute;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+  }
+  button.add_cart:hover span,
+  button.add_cart.hover span {
+    -webkit-transform: translate3d(-20px, 0px, 0px);
+    transform: translate3d(-20px, 0px, 0px);
+    opacity: 1;
+  }
+  button.add_cart:hover i,
+  button.add_cart.hover i {
+    opacity: 1;
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s;
+  }
+  button.add_cart:hover:before,
+  button.add_cart.hover:before {
+    width: 44px;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+  }
+  button.add_cart:active:before {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  button.add_cart.blue {
+    background-color: #20638f;
+  }
+  button.add_cart.red {
+    background-color: #962d22;
+  }
+  button.add_cart.yellow {
+    background-color: #a85913;
+  }
+    /*---> End Button Add to Cart <----*/
+    
+    
+    .snip1549 {
+      font-family: 'Lato', Arial, sans-serif;
+      position: relative;
+      overflow: hidden;
+      margin: 10px;
+      min-width: 230px;
+      max-width: 315px;
+      width: 100%;
+      color: #000000;
+      font-size: 16px;
+      line-height: 1.2em;
+      text-align: center;
+    }
+    .snip1549 *,
+    .snip1549 *:before,
+    .snip1549 *:after {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all 0.35s ease;
+      transition: all 0.35s ease;
+    }
+    .snip1549:before {
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      content: '';
+      background-color: #ffffff;
+      opacity: 0;
+      -webkit-transform: scale(0.1);
+      transform: scale(0.1);
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+    }
+    .snip1549 img {
+      max-width: 100%;
+      vertical-align: top;
+    }
+    .snip1549 i {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      background-color: #333333;
+      border-radius: 3px;
+      color: #000000;
+      display: block;
+      font-size: 20px;
+      line-height: 34px;
+      text-align: center;
+      width: 34px;
+      opacity: 0;
+    }
+    .snip1549 i:before {
+      color: #fff;
+    }
+    .snip1549 i:hover {
+      background-color: #D2B17F;
+      cursor: pointer;
+    }
+    .snip1549 a {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+    .snip1549:hover:before,
+    .snip1549.hover:before {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    .snip1549:hover i,
+    .snip1549.hover i {
+      -webkit-transition-delay: 0.25s;
+      transition-delay: 0.25s;
+      opacity: 1;
+    }
+
+    /* Button Continue Shopping */
+    button.snip1086 {
+      font-family:'Times New Roman', Times, serif;
+      border: none;
+      background-color: #000000;
+      border-radius: 5px;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 10px 40px;
+      display: inline-block;
+      margin: 15px 40px;
+      text-transform: uppercase;
+      line-height: 1.5em;
+      font-weight: 500;
+      font-size: 1em;
+      outline: none;
+      position: relative;
+      opacity: 1;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    button.snip1086 span {
+      display: inline-block;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      opacity: 0.8;
+      -webkit-transition-delay: 0.3s;
+      transition-delay: 0.3s;
+    }
+    button.snip1086 i {
+      font-size: 28px;
+      text-align: center;
+      width: 100%;
+      top: 50%;
+      left: 0;
+      display: block;
+      position: absolute;
+      opacity: 0;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%);
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+    }
+    button.snip1086:before {
+      content: '';
+      top: 0;
+      left: 50%;
+      right: 50%;
+      position: absolute;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.15);
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      -webkit-transition-delay: 0.15s;
+      transition-delay: 0.15s;
+    }
+    button.snip1086:hover span,
+    button.snip1086.hover span {
+      opacity: 0;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+    }
+    button.snip1086:hover i,
+    button.snip1086.hover i {
+      opacity: 1;
+      -webkit-transition-delay: 0.2s;
+      transition-delay: 0.2s;
+    }
+    button.snip1086:hover:before,
+    button.snip1086.hover:before {
+      left: 0;
+      right: 0;
+      -webkit-transition-delay: 0s;
+      transition-delay: 0s;
+    }
+    button.snip1086:active:before {
+      background: rgba(255, 255, 255, 0.3);
+    }
+    button.snip1086.blue {
+      background-color: #20638f;
+    }
+    button.snip1086.red {
+      background-color: #962d22;
+    }
+    button.snip1086.yellow {
+      background-color: #a85913;
+    }
+    /* Button Cart_submit */
+
+    .cart_submit1 {
+      font-family: 'Raleway', Arial, sans-serif;
+      border: none;
+      background-color: #148f77;
+      border-radius: 20px;
+      color: #ffffff;
+      cursor: pointer;
+      padding: 0px 40px;
+      display: inline-block;
+      margin: 1% 30%;
+      text-transform: uppercase;
+      line-height: 2.7em;
+      font-weight: 600;
+      font-size: 1em;
+      outline: none;
+      position: relative;
+      font-size: 16px;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    .cart_submit1:hover,
+    .cart_submit1.hover {
+      background-color: #00CCCC;
+      transition: 0.3s;
+    }
