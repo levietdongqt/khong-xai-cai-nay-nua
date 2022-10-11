@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eprojeck group 2</title>
+
+    <style media="screen">
+        body {
+            background: #ECEFF1;
+            color: rgba(0, 0, 0, 0.87);
+            font-family: Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #message {
+            background: white;
+            max-width: 360px;
+            margin: 100px auto 16px;
+            padding: 32px 24px;
+            border-radius: 3px;
+        }
+
+        #message h2 {
+            color: #ffa100;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0 0 8px;
+        }
+
+        #message h1 {
+            font-size: 22px;
+            font-weight: 300;
+            color: rgba(0, 0, 0, 0.6);
+            margin: 0 0 16px;
+        }
+
+        #message p {
+            line-height: 140%;
+            margin: 16px 0 24px;
+            font-size: 14px;
+        }
+
+        #message a {
+            display: block;
+            text-align: center;
+            background: #039be5;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+            padding: 16px;
+            border-radius: 4px;
+        }
+
+        #message,
+        #message a {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        #load {
+            color: rgba(0, 0, 0, 0.4);
+            text-align: center;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+
+            body,
+            #message {
+                margin-top: 0;
+                background: white;
+                box-shadow: none;
+            }
+
+            body {
+                border-top: 16px solid #ffa100;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loadEl = document.querySelector('#load');
+            // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+            // // The Firebase SDK is initialized and available here!
+            //
+            // firebase.auth().onAuthStateChanged(user => { });
+            // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+            // firebase.firestore().doc('/foo/bar').get().then(() => { });
+            // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+            // firebase.messaging().requestPermission().then(() => { });
+            // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+            // firebase.analytics(); // call to activate
+            // firebase.analytics().logEvent('tutorial_completed');
+            // firebase.performance(); // call to activate
+            //
+            // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+            try {
+                let app = firebase.app();
+                let features = [
+                    'auth',
+                    'database',
+                    'firestore',
+                    'functions',
+                    'messaging',
+                    'storage',
+                    'analytics',
+                    'remoteConfig',
+                    'performance',
+                ].filter(feature => typeof app[feature] === 'function');
+                loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+            } catch (e) {
+                console.error(e);
+                loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+            }
+        });
+    </script>
+    <!--Bắt đầu gọi CSS tự viết-->
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/button.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/intro.css">
+    <link rel="stylesheet" href="css/pagination.css">
+    <link rel="stylesheet" href="css/compare.css">
+    <link rel="stylesheet" href="css/about.css">
+    <!-- Kết thúc gọi CSS tự viết -->
+    <!--Bắt đầu gọi thư viện CSS của BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--Kết thúc gọi thư viện CSS của BOOTSTRAP-->
+
+    <!-- Bắt đầu gọi thư viện icon -->
+    <link rel="stylesheet" href="./fontawesome-pro-6.1.0-web/css/all.min.css">
+    <!-- Kết thúc gọi thư viện icon -->
+
+    <!--Bắt đầu gọi thư viện JQUERY-->
+    <script src="js/jquery-3.6.0.js"></script>
+    <!--Kết thúc gọi thư viện JQUERY-->
+
+    <!--Bắt đầu gọi thư viện BOOTSTRAP-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--Kết thúc gọi thư viện BOOTSTRAP-->
+
+    <!--Bắt đầu gọi thư viện ANGULARJS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.0/ui-bootstrap-tpls.min.js"></script>
+    <script src="js/jquery-3.6.0.js"></script>
+    <!--Kết thúc gọi thư viện ANGULARJS-->
+    <script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+
+
+
+</head>
+
+<body ng-app="myApp" ng-controller="myctr">
+    <div class="container">
+        <div class="header ">
+            <div class="row heads">
+
+                <!-- LOGO -->
+                <div class="col-lg-3 col-md-3 col-3 ">
+                    <div class="logo">
+                        <a href="#!" title="Genuine Glasses">
+                            <img src="img/LOGO/LOGO.PNG" alt="Genuine Radius In Ho Chi Minh City" width="90%"
+                                class="imga">
+                        </a>
+                    </div>
+                </div>
+                <!-- search                     -->
+                <div class="col-lg-5 col-md-5 col-5">
+                    <div class="input-group srch">
+                        <input type="text" class="form-control  " placeholder="What glasses do you need? " value=""
+                            ng-model="search" required />
+                        <a href="#!list/search" ng-click="load_info('',search,1)">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button"><i
+                                        class="fa-duotone fa-magnifying-glass"></i></button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-4 cartiabout">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="input-group">
+                                <a href="#!contact" title="Account" rel="nofollow" class="login l2">
+                                    <span>
+
+                                        <button class="login" type="button"><i class="fa-regular fa-phone"></i></button>
+                                    </span>
+                                    <div class="text-login">
+                                        <p>Contact Us</p>
+
+                                    </div>
+
+                                </a>
+
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="input-group">
+                                <a href="#!about" title="Account" rel="nofollow" class="login l2" ng-click="menu_ab('about-us')">
+                                    <span>
+
+                                        <button class="login" type="button"><i class="fa-duotone fa-user-secret "
+                                                aria-hidden="true"></i></button>
+                                    </span>
+                                    <div class="text-login">
+                                        <p>About Us</p>
+
+                                    </div>
+
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="minicart" ng-click="show_cart1()">
+                                <a href="#!cart" title="Cart" rel="nofollow" class="gio">
+                                    <span>
+                                        <button class="login" type="button"> <i class="fa-solid fa-cart-minus"
+                                                aria-hidden="true"></i></button>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-2">
+                            <div class="web-view">
+                                <i class="fa-duotone fa-eye"></i>
+                                <div class="website-counter">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+        <div class="row xyz fixmenu2">
+            <div class="col-lg-1 col-md-1 col-sm-1 col-1 ">
+                <a href="#!">
+                    <div style="padding-top: 30% ; text-align: right; font-size: 1.5rem; color: red;">
+                        <i class="fa-regular fa-house"></i>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-2 ">
+                <button class="menu-down a2" type="button" data-bs-toggle="dropdown" aria-expanded="true">
+                    BRANDS
+                    &emsp;
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <ul class="dropdown-menu">
+                    <li ng-repeat="x in databrand">
+                        <a class="dropdown-item" href="#!list/{{x.Name}}" title=" RayBan" ng-click="load_info(x.Name)"
+                            ng-class="{active_menu: activePath=='/list/{{x.Name}}'}">
+                            {{x.Name}}</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9  col-9 xmenu ">
+
+                <a href="#!list/SunGlasses" style=" display:inline-block;  text-decoration: none" class="menu-ngang " ;
+                    ng-click="load_info('SunGlasses')" ng-class="{ active_menu: activePath=='/list/SunGlasses' }">
+                    <div class=" home-menu-ngang">
+                        <img class="" src="img/sun21.jpg" style="width: 2.5rem; height: auto;">
+                        <span style="font-size: 1rem;letter-spacing: 0.1rem; ">Sunglasses</span>
+                    </div>
+                </a>
+                <a href="#!list/Glasses" style=" display: inline-block;  text-decoration: none" class="menu-ngang" ;
+                    ng-click="load_info('Glasses')" ng-class="{ active_menu: activePath=='/list/Glasses' }">
+                    <div class=" home-menu-ngang">
+                        <img src="img/rayban11.jpg" style="width: 3rem; height: auto;">
+                        <span style="font-size: 1rem;letter-spacing: 0.1rem">Glasses</span>
+                    </div>
+                </a>
+                <a href="#!list/Contact-Lens" style=" display: inline-block;  text-decoration: none" class="menu-ngang" ;
+                    ng-click="load_info('Contact lens')" ng-class="{ active_menu: activePath=='/list/Contact-Lens' }">
+                    <div class=" home-menu-ngang">
+                        <img src="img/img6.jpg" style=" width: 1.5rem; height: auto;">
+                        <span style="font-size: 1rem;letter-spacing: 0.1rem ">Contact Lens</span>
+                    </div>
+                </a>
+                <a href="#!compare" style=" display: inline-block;  text-decoration: none;" class="menu-ngang" ;
+                    ng-class="{ active_menu: activePath=='/compare' }">
+                    <div class=" home-menu-ngang">
+                        <img src="img/LOGO/compare.jpg" style=" width: 3rem; height: auto;">
+                        <span style="font-size: 1rem;letter-spacing: 0.1rem ">Compare</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <!--Ng ng view-->
+        <div ng-view style="margin-bottom:5%;margin-top:5%">
+        </div>
+    </div>
+    <!--- k thuc ng- view-->
+    <div class="container">
+        <div class="row b">
+            <h2 class="fb">Feed Back</h2>
+            <div class="col-lg-12 col-md-12">
+                <div class="feedback">
+                    <div class="sliver_div">
+                        <input type="radio" name="inputslider" id="img1">
+                        <input type="radio" name="inputslider" id="img2">
+                        <div class="divslider1">
+                            <div class="thuhuy">
+                                <img src="img/Avatar/actor-aoi-yuki-390169_large.jpg" alt="">
+                                <h2>Ceo</h2>
+                                <p>Beautiful glasses. Price goes hand in hand with quality and service. Enthusiastic
+                                    staff</p>
+                            </div>
+                            <div class="thuhuy">
+                                <img src="img/Avatar/Giovanni-Boggero_avatar_1494847813.jpeg" alt="">
+                                <h2>Bussiness</h2>
+                                <p>Finding a place to buy glasses is hard. Luckily Glasses gave me a great experience
+                                </p>
+                            </div>
+                            <div class="thuhuy">
+                                <img src="img/Avatar/images.jpg" alt="">
+                                <h2>Student</h2>
+                                <p>I bought RayBan glasses at the shop. The store is very enthusiastic and free
+                                    shipping. I'm very satisfied</p>
+                            </div>
+                            <div class="thuhuy">
+                                <img src="img/Avatar/q8RgWM0h58pcXUv8ICiNLd2ZoUX.jpg" alt="">
+                                <h2>DOCTOR</h2>
+                                <p>The glasses at the store are really cool. I will visit the store again. Very good
+                                    service staff</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lableslider">
+                        <label for="img1"></label>
+                        <label for="img2"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div>
+            <div class="row">
+
+                <div class=" col-12 col-md-3 col-lg-63 col-xl-3 col-sm-6 mx-auto mt-3">
+                    <div class="snip1562">
+                        <div class="icon2">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                        </div>
+
+                        <span style="font-size:16px; ">Free exchange</span>
+                        <br>
+                        <span style="font-size:11px; color:rgb(111, 112, 112) ; "> Easy exchange with no fees
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 col-lg-63 col-xl-3 mx-auto mt-3">
+                    <div class="snip1562">
+                        <div class="icon2">
+                            <i class="fa-duotone fa-truck-fast"></i>
+                        </div>
+
+                        <span style="font-size:16px; ">FREE SHIPPING</span>
+                        <br>
+                        <span style="font-size:11px; color:rgb(111, 112, 112) ; "> Orders over 50$
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 col-lg-63 col-xl-3 mx-auto mt-3">
+                    <div class="snip1562">
+                        <div class="icon2">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+
+                        <span style="font-size:16px; ">verified origin</span>
+                        <br>
+                        <span style="font-size:11px; color:rgb(111, 112, 112) ; "> warranty genuine
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-3 col-lg-63 col-xl-3 mx-auto mt-3">
+                    <div class="snip1562">
+                        <div class="icon2">
+                            <i class="fa-sharp fa-solid fa-shield-check"></i>
+                        </div>
+
+                        <span style="font-size:16px; ">100% safe</span>
+                        <br>
+                        <span style="font-size:11px; color:rgb(111, 112, 112) ; "> encrypted information
+                        </span>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="footer">
+
+
+            <div class="container">
+                <div>
+                    <div class="row">
+                        <div class="col-md-3 col-lg-63 col-xl-3 mx-auto mt-3">
+                            <div class="">
+                                <div class="footer-h2 ">Shop All</div>
+                                <ul class="home_ul">
+                                    <li > <a class="footer-item" 
+                                        href="index.html#!/list/SunGlasses" rel="nofollow"  
+                                        ng-click="load_info('SunGlasses')"
+                                        ng-class="{ active_menu: activePath=='/list/SunGlasses' }">Sunglasses </a> </li>
+                                    <li ><a class="footer-item" href="index.html#!/list/Glasses" rel="nofollow" 
+                                        ng-click="load_info('Glasses')"
+                                        ng-class="{ active_menu: activePath=='/list/Glasses' }">Glasses</a></li>
+                                    <li ><a class="footer-item" href="index.html#!/list/Contact-Lens" rel="nofollow" 
+                                      ng-click="load_info('Contact lens')"
+                                      ng-class="{ active_menu: activePath=='/list/Contact-Lens' }">Contact Lens</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-63 col-xl-3 mx-auto mt-3">
+                            <div class=" ">
+                                <div class="footer-h2">CUSTOMER SUPPORT</div>
+                                <ul class="home_ul">
+                                    <li  ><a class="footer-item" 
+                                        href="index.html#!/contact#contact" rel="nofollow" 
+                                        ng-class="{ active_menu: activePath=='/contact' }">Contact</a></li>
+                                    <li ng-click="menu_ab('Payments')"><a class="footer-item" 
+                                        href="index.html#!/about#Payments" rel="nofollow"
+                                        ng-class="{ active_menu: show_Payments==true && activePath=='/about'}">Payments</a></li>
+                                    <li  ng-click="menu_ab('GUARANTEE')"><a class="footer-item" 
+                                        href="index.html#!/about#GUARANTEE" rel="nofollow"
+                                        ng-class="{ active_menu: show_GUARANTEE==true && activePath=='/about'}">Terms of warranty - exchange &
+                                            return</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-lg-63 col-xl-3 mx-auto mt-3">
+                            <div class="">
+                                <div class="footer-h2">INFORMATION</div>
+                                <ul class="home_ul">
+                                    <li ng-click="menu_ab('Policy')"><a class="footer-item" 
+                                        href="index.html#!/about#Policy" rel="nofollow"
+                                        ng-class="{ active_menu: show_Policy==true && activePath=='/about'}">Privacy Policy</a></li>
+                                    <li ng-click="menu_ab('Terms')"><a class="footer-item" 
+                                        href="index.html#!/about#Terms" rel="nofollow"
+                                        ng-class="{ active_menu: show_Terms==true && activePath=='/about'}">Usage Agreement</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-lg-63 col-xl-3 mx-auto mt-3">
+                            <div class="footer-box">
+                                <div class="footer-h2">CONTACT</div>
+                                <ul class="footer-box-contact home_ul">
+                                    <li><i class="fa fa-home" aria-hidden="true"></i> 275 Nguyen Van Dau, Ward 11,
+                                        Binh Thanh, Ho Chi Minh City</li>
+                                    <li><i class="fa fa-mobile" aria-hidden="true"></i> <a href="tel:84988888888"
+                                            rel="nofollow">0888 - 8888 - 88</a></li>
+                                    <li><i class="fa fa-envelope" aria-hidden="true"></i> <a
+                                            href="mailto:info@glasses.com" rel="nofollow">info@glasses.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <hr>
+            <div>
+                <h1>Connect With Us</h1>
+                <p>Share your decoration tips, find renovation inspiration and earn rewards by connecting with us!</p>
+                <a href="https://www.facebook.com" target="_blank" rel="nofollow"><i
+                        class="fab fa-facebook"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://www.youtube.com" target="_blank" rel="nofollow"><i
+                        class="fab fa-youtube"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://www.pinterest.com" target="_blank" rel="nofollow"><i
+                        class="fab fa-pinterest"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://www.twitter.com" target="_blank" rel="nofollow"><i
+                        class="fab fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://www.instagram.com" target="_blank" rel="nofollow"><i
+                        class="fab fa-instagram-square"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="https://www.tiktok.com" target="_blank" rel="nofollow"><i
+                        class="fab fa-tiktok"></i></a>&nbsp;&nbsp;&nbsp;
+                <a href="#" target="_blank" rel="nofollow"><i class="fab fa-telegram-plane"></i></a>
+                <p class="COPYRIGHT">Copyright &copy; 2022 Persol. All rights reserved.</p>
+            </div>
+
+
+
+
+
+
+
+            <div class="bottom-button">
+                <div class="contact-us">
+
+                    <button class=" row menu-down call lienhe-button" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="true">
+                        <p>
+                            <img src="https://st.patrick.vn/utils/img/master/tu-van.svg" aria-hidden="true"
+                                id="conversion-contact" width="50" height="50" />
+                        </p>
+                    </button>
+
+
+                    <ul class=" row dropdown-menu lienhe-menu contact-us">
+                        <div class="lienhe-item">
+                            <li>
+                                <a class="lienhe-item" href="#!contact" title=""><i class="fa-duotone fa-phone"></i></a>
+                            </li>
+                        </div>
+
+
+                        <div class=" row lienhe-item">
+                            <li>
+                                <a class="lienhe-item" href="#!contact" title=""><i
+                                        class="fa-brands fa-facebook"></i></a>
+                            </li>
+                        </div>
+
+                        <div class="lienhe-item">
+                            <li>
+                                <a class="lienhe-item" href="mailto:levietdongqt@gmail.com"
+                                    title="r"><i class="fa-regular fa-envelope"></i></a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+
+                <span id="location"></span>
+                <span id="clock"></span>
+                <script src="js/intro.js"></script>
+                <script src="./js/contact.js"> </script>
+            </div>
+            </div>
+
+</body>
+
+</html>

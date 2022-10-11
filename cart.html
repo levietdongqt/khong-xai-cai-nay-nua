@@ -1,0 +1,118 @@
+<div class="cart_show">
+    <!-- ng-show="!show_cart" -->
+    <div class="row" ng-show="!show_cart">
+        <div class="alert alert-danger center cart_text" role="alert">
+            The cart is empty, Please choose the items!!    
+        </div>
+
+    </div>
+    <div class="row " ng-show="show_cart">
+            <div class="col-md-1"></div>
+            <div class="col-md-4 cart_boder">
+                <div>
+                    <h3 class="cart_text">THE INFORMATION</h3>
+                   
+                </div>
+                
+                <div ng-repeat="x in datacart track by $index" >
+                    <hr>
+                        <div class="row">
+                            <div>
+                                <img ng-src="{{x.Src.img2}}" class="cart_img1"> </div>
+                            </div>
+                        <div class="row">
+                            <div>
+                                <h3 class="cart_text">{{x.Brand.Name}} {{x.Color}}</h3>
+                                <br>
+                                <!-- <span class="cart_text1">Quantity: </span> <span class="cart_text2">  {{x.Quantity}} </span> -->
+                                <input type="number" name="" id="" ng-model="x.Quantity" ng-change="change_price($index)" class="cart-quati">
+                                <br>
+                                <span class="cart_text1">Price:  </span > <span class="cart_text2">  {{x.Total}} USD</span>
+                                <br>
+                            <button class="btn btn-danger" ng-click="deleteRow($index)">Delete</button>
+                            </div>
+                        </div>
+                        
+                    
+                       </span> 
+                </div>
+                <hr>
+                <span class="cart_text1 "> The Total: </span> <span class="cart_text2">  {{sum}} USD
+                    <hr>
+                <input type="button" value="Delete Cart" ng-click="deleteCart()">
+                <!-- method="post" -->
+            </div>
+            <div class="col-md-7 ">
+                <div class="cart_form">
+                    <form  action="" id="frm1" name="frm1" class=" form-group" method="post">
+                        <h3 class="cart_text">BILLING INFORMATION</h3>
+                        <hr>
+                        <input type="radio"
+                                    name="gender" 
+                                    value="Mr." 
+                                    ng-model="Bill.Gender" ng-checked="true" > 
+                            <label class="cart_label" >Mr. </label> 
+                         <input type="radio" 
+                                    name="gender" 
+                                    value="Ms."
+                                    ng-model="Bill.Gender" > 
+                             <label class="cart_label" >Ms. </label> 
+                         <br> <br> 
+                        <label class="cart_label" >FIRST NAME </label> 
+                            <input type="text" class="form-control" 
+                                    id="fname" name="fname"  
+                                    ng-model="Bill.Fname" 
+                                    placeholder="Your name" required>
+                            <span class="msg" ng-show="frm1.fname.$invalid">First name is required</span>
+                            
+                            <br>
+                        <label class="cart_label" >LAST NAME </label>
+                            <input type="text" class="form-control" 
+                                    id="lname" name="lname" 
+                                    ng-model="Bill.Lname"
+                                    placeholder="Your name" 
+                                    required>  
+                             <span class="msg" ng-show="frm1.lname.$invalid">Last name is required</span> <br>
+                        <label class="cart_label">TELEPHONE </label> 
+                            <input type="number" class="form-control"
+                                     id="phone" name="phone"
+                                     ng-model="Bill.Phone" 
+                                     placeholder="Your phone number" required>
+                              <span class="msg" ng-show="frm1.phone.$invalid">Phone number is required</span>       
+                                     <br>
+                        <label class="cart_label">EMAIL </label>
+                            <input type="email" class="form-control" 
+                                    id="email" name="email"
+                                    ng-model="Bill.Email"  
+                                    placeholder="Your Email" required> 
+                             <span class="msg" ng-show=" frm1.email.$pristine">Email is required</span>
+                             <span class="msg" ng-show="frm1.email.$invalid && frm1.email.$touched"> Not valid Email!! </span>
+                                    <br>
+                        <label class="cart_label">ADRESSS </label>
+                            <input type="text" class="form-control"
+                                     id="adress" name="adress"
+                                     ng-model="Bill.Adress"  
+                                     placeholder="Your Adress" required>
+                             <span class="msg" ng-show="frm1.adress.$invalid">The adress is required</span>
+                            <br>
+                         <label class="cart_label"> DATE OF BIRTHDAY </label>
+                            <input type="date" class="form-control" id="date" name="date" ng-model="Bill.Date" placeholder="Your birthday" min="1920-01-01" max="2022-01-01"> 
+                            <span class="msg" ng-show="frm1.date.$error.min">The date must be after 1920-01-01 </span>
+                            <span class="msg" ng-show="frm1.date.$error.max">The date must be before 2022-1-1</span>
+                            <br>
+                        <label class="cart_label"> Required fields </label> <br>
+                             <input type="checkbox" name="s1" value="value1" checked /> 
+                                     My Billing Address is the same as my Shipping Address </label>
+                                     <br>
+                             <input type="checkbox" name="s2" value="value2" checked />  
+                                     Notify me about future special offers </label>
+                                     <br>
+                        <input type="button" value="Submit" class="cart_submit1" ng-disabled="frm1.$invalid" ng-click="cart_submit()">  
+                        
+                    </form>
+
+                </div>
+                
+            </div>
+    </div>
+</div>

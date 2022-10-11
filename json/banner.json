@@ -1,0 +1,89 @@
+[
+    {
+        "Type": "liveshow-main",
+        "img": "img/Banner/rayban.jpg"
+    },
+    {
+        "Type": "liveshow",
+        "img": "img/Banner/boss.jpg"
+    },
+    {
+        "Type": "liveshow",
+        "img":"img/Banner/gucci.jpg"
+    },
+    {
+        "Type": "liveshow",
+        "img": "img/Banner/oakley.jpg"
+    },
+    {
+        "Type": "banner",
+        "img": "../img/bannerlist/rb-stories-round-shinyblue-banner.jpg",
+        "KeyWord": "Ray-Ban",
+        "p1": "RAYBAN GLASSES",
+        "p2": "AUTHENTIC RAYBAN STORE",
+        "c1": "Ray.Ban Brand",
+        "c2": "Immortal Monuments"
+    },
+    {
+        "Type": "banner",
+        "img": "../img/bannerlist/latam-outdoor-hero-d.jpg",
+        "KeyWord": "Oakley",
+        "p1": "OAKLEY GLASSES",
+        "p2": "AUTHENTIC OAKLEY STORE",
+        "c1": "Oakley Brand",
+        "c2": "Immortal Monuments"
+    },
+    {
+        "Type": "banner",
+        "img": "../img/bannerlist/BOSS_PF20_Toronto_keyvisual_Landscape-scaled.jpg",
+        "KeyWord": "Boss-Hugo",
+        "p1": "HUGO BOSS GLASSES",
+        "p2": "AUTHENTIC HUGO BOSS STORE",
+        "c1": "HUGO BOSS Brand",
+        "c2": "Immortal Monuments"
+    },
+    {
+        "Type": "banner",
+        "img": "../img/bannerlist/guccibanner.jpg",
+        "KeyWord": "Gucci",
+        "p1": "GUCCI GLASSES",
+        "p2": "AUTHENTIC GUCCI STORE",
+        "c1": "Gucci Brand",
+        "c2": "Immortal Monuments"
+    },
+    {
+        "Type": "banner",
+        "img": "../img/bannerlist/Burberry-eyewear-Autumn-Winter-2014-campaign.jpg",
+        "KeyWord": "Burberry",
+        "p1": "BUBERRY GLASSES",
+        "p2": "AUTHENTIC BUBERRY STORE",
+        "c1": "Buberry Brand",
+        "c2": "Immortal Monuments"
+    },
+    {
+        "Type": "banner",
+        "img": "../img/bannerlist/SunGlasses_Banner.jpg",
+        "KeyWord": "SunGlasses",
+        "p1": "SunGlasses",
+        "p2": "AUTHENTIC STORE",
+        
+        "c2": "Immortal Monuments"
+    },
+    {
+        "Type": "banner",
+        "img": "../img/bannerlist/Glasses_Banner.webp",
+        "KeyWord": "Glasses",
+        "p1": "Glasses",
+        "p2": "AUTHENTIC STORE",
+        
+        "c2": "Immortal Monuments"
+    },
+    {
+        "Type": "banner",
+        "img": "../img/bannerlist/Contact_lens_banner.png",
+        "KeyWord": "Contact lens",
+        "p1": "Contact lens",
+        "p2": "AUTHENTIC STORE",       
+        "c2": "Immortal Monuments"
+    } 
+]

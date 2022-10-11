@@ -1,0 +1,55 @@
+<div class="row" ng-repeat="x in datalist[index] track by $index">
+
+    <div class="col-md-7 col-sm-12 col-12" >
+        <div class="row" >
+            <div >
+                <img ng-src="{{img}}" class="product_img1 "  >
+                
+            </div>   
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-4">
+                <div class="product_boder">
+                    <img ng-src="{{x.Src.img1}}" class="product_img1 " ng-click="small_img(x.Src.img1)" >
+                </div>
+                
+            </div>
+            <div class="col-md-4 col-sm-4 col-4">
+                <div class="product_boder">
+                <img ng-src="{{x.Src.img2}}" class="product_img1 "  ng-click="small_img(x.Src.img2)">
+                </div >
+            </div>
+            <div class="col-md-4 col-sm-4 col-4">
+                <div class="product_boder">
+                <img ng-src="{{x.Src.img3}}" class="product_img1 "  ng-click="small_img(x.Src.img3)">
+                </div >
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5" >
+        <div>
+            <h2> {{x.Brand.Name}} {{x.Color}} {{x.ID}} </h2>
+            <span class="product_span1"> Brand:   </span>      {{x.Brand.Name}}  <br>
+            <span class="product_span1"> Color:   </span>      {{x.Color}}  <br>
+            <span class="product_span1"> Gender:  </span>     {{x.Gender}}   <br>
+            <span class="product_span1"> Year:    </span>     {{x.Year}}      <br>
+            <span class="product_span1"> Description:   </span>     {{x.Detail}}      <br>
+            <span class="product_span1"> Dowload Detail:  <a ng-href="{{x.Word}}" class="word-link"> Click here</a>
+        
+            <hr> 
+            <span class="produc_price"> Price:  {{x.Price}} USD</span> 
+            <h3 > Total: 
+                <span ng-show="show_price"> {{price}}  USD </span> 
+              
+                <span ng-hide="show_price" class="produc_price_error"> Please choose quantity!! </span>
+            </h3> 
+            
+            <span class="product_span1"> Quantity: </span>
+                <input type="number" class="product_boxnumber" ng-model="quantity" ng-change="product_price(x.Price,quantity)" name="quantity" min="1">
+                <br>
+                <hr>
+            <button  class="add_cart red" ng-click="add_cart(index,quantity)"><span>Add to Cart</span><i class="ion-ios-cart"></i></button>
+            
+    </div>
+</div>
+</div>

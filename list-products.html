@@ -1,0 +1,61 @@
+<div ng-show="noResult">
+  <div class="alert alert-danger center" role="alert">
+      Oops, sorry! Nothing matches <b> "{{show_Search}}"  </b><br>
+      Please help us find your favorite product: <br>
+      Check your spelling | Be less specific | Use different keywords
+  </div>
+</div>
+<div ng-show="!noResult">
+  <!-- Banner -->
+  <div ng-show="show_banner"> 
+    <div class="row" >
+      <div class="col-lg-12 col-md-12 col-12" ng-repeat="x in databanner | filter: load :true ">      
+        <div style="background-image: url({{x.img}});" class="banner-list-product"  >
+          <p class="p1">{{x.p1}}</p>
+          <P class="p2">{{x.p2}}</P>
+        </div>
+        <div class="content-list-product">
+          <p class="c1">{{x.c1}}</p>
+          <p class="c2">{{x.c2}}</p>
+        </div>
+      </div> 
+    </div>
+  </div>
+<!-- End Banner -->
+  <!--Danh sách Sản phẩm -->
+  <div class="row list_margin">
+    <div class="col-md-9">
+      <span class="list_bold">{{load}} {{show_Search}}</span> ({{filtered1.length}})
+    </div>
+    <div class="col-md-3 " >
+      <div>
+        <pagination boundary-links="false" max-size="2" items-per-page="itemsPerPage" total-items="pagination_number"
+        ng-model="currentPage" ng-change="pagination_list(currentPage)"></pagination>
+      </div>
+      
+    </div>
+  </div>
+  <div class="row ">
+    <div class="col-md-3 col-sm-4 col-6 " ng-repeat="x in  data_pagination">
+      <div class="list_product_hover" ng-click="get_index(x.Img.ID)" >
+
+        <img ng-src="{{x.Img.Src.img2}}" class="product_img1 ">
+
+        <div class="caption1">
+          <h3>Buy Now</h3>
+        </div>
+        <a href="#!product/{{x.Img.ID}}" style=" display: inline-block;  text-decoration: none;"
+          ng-click="big_img(x.Img.Src.img2)" class="link"> </a>
+
+      </div>
+      <div class="center" style="margin-bottom:12%">
+        <span style="font-weight:bold;font-size:1.5rem">{{x.Img.Brand.Name}} </span>
+        <br>
+        <span>{{x.Img.Color}} {{x.Img.ID}} </span>
+        <br>
+        <span>{{x.Img.Price}} USD</span>
+
+      </div>
+    </div>
+  </div>
+</div>
