@@ -32,8 +32,8 @@
 .bt .btnab{
 position: relative;  
  width: 155px; 
- height: 50px;   
- margin: 20px;
+ height: 50px;
+ margin: 10px;   
 }
 
 .bt .btnab a{
@@ -341,7 +341,7 @@ section::after{
 
 .error{
     color: red;
-    margin-top: 50px;}
+    text-align: center;}
 
  /* KẾT THÚC FORM CONTACT */
 .about_p{
