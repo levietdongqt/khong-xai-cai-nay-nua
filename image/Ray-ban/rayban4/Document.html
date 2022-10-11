@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://127.0.0.1:5501/test.html#!/index2 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.snip0072 {
+  font-family: 'Raleway', Arial, sans-serif;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  cursor: pointer;
+  padding: 20px 40px;
+  display: inline-block;
+  margin: 15px 35px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 1em;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+}
+.snip0072:before {
+  border-radius: 3px;
+  content: '';
+  display: block;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 50%;
+  bottom: 50%;
+  background-color: #ffffff;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  opacity: 0;
+  -webkit-transition: all 0.1s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+.snip0072:hover,
+.snip0072.hover {
+  color: red;
+  -webkit-animation: flashText 0.5s;
+  animation: flashText 0.3s;
+}
+
+.snip0072:hover:before,
+.snip0072.hover:before {
+  top: 15%;
+  bottom: 15%;
+  background-color: rgba(255, 255, 255, 0.1);
+  opacity: 0.8;
+}
+
+.snip0072:active:before {
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.snip0072.blue {
+  background-color: #1e5d87;
+}
+.snip0072.red {
+  background-color: #8e2a20;
+}
+
+.snip0072.yellow {
+  background-color: #b66015;
+}
+
+@-webkit-keyframes flashText {
+  0% {
+    color: green;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: red;
+  }
+}
+
+@keyframes flashText {
+  0% {
+    color: green;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: red;
+  }
+}
+.img{
+  width:20%;
+  height: auto;
+}
+.img1{
+  width: 80%;
+  height: auto;
+}
+.boder1{
+  border: solid;
+}
+
+    </style>
+     <link href="./Document_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <script src="./Document_files/bootstrap.bundle.min.js.download" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <script src="./Document_files/angular.min.js.download"></script>
+     <script src="./Document_files/angular-route.js.download"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myctr" class="ng-scope">
+        <div>
+          
+            <a href="http://127.0.0.1:5501/test.html#!index2" style=" display: inline-block;  text-decoration: none;" class="snip0072" ;="" ng-click="get_index(0)">
+                <img src="./Document_files/img1.jpg" style="width: 50px; height: 25;">
+                <span style="font-size: 1.3em; ">Gọng Kính</span>
+            </a>
+            <a href="http://127.0.0.1:5501/test.html#!index2" style=" display: inline-block;  text-decoration: none;" class="snip0072" ;="" ng-click="get_index(1)">
+                <img src="./Document_files/img1.jpg" style="width: 50px; height: 25;">
+                <span style="font-size: 1.3em; ">Gọng Kính</span>
+            </a>
+        </div>
+      
+        <!-- ngView: --><div ng-view="" class="ng-scope"><h2 class="ng-scope">Cách load theo index chỉ định nè </h2>
+<br class="ng-scope">
+<!-- ngRepeat: x in datalist[index] -->
+<!-- 
+<h2> Cách bình thường hay xài nè </h2>
+<br> 
+<div ng-repeat="x in datalist track by $index">
+  {{x.Img.Name}}
+  <br> 
+  {{x.Img}}
+  
+  <br><br>
+</div>
+--></div>
+    </div>
+   
+
+    <script>
+       var app = angular.module("myApp", [
+    "ngRoute"
+    
+ ]);
+ app.config(function($routeProvider){
+           $routeProvider
+           .when("/",{templateUrl: "test1.html"})
+           .when("/index2",{templateUrl: "test2.html"});
+       });
+     app.controller('myctr', function($scope, $http ) {
+
+        $http.get('json/data-main.json')
+        .then(function(response) {
+     var data = response.data;
+     $scope.datalist = data;
+     console.log($scope.datalist);    
+      });
+     
+ $scope.get_index =function(index){
+        
+        $scope.index=index;
+    console.log($scope.index)
+     };
+});
+
+    </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
