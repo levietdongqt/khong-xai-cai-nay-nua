@@ -29,7 +29,7 @@
                                 <br>
                                 <span class="cart_text1">Price:  </span > <span class="cart_text2">  {{x.Total}} USD</span>
                                 <br>
-                            <button class="btn btn-danger" ng-click="deleteRow($index)">Delete</button>
+                            <button class="cart_delete" ng-click="deleteRow($index)">Delete</button>
                             </div>
                         </div>
                         
@@ -39,7 +39,7 @@
                 <hr>
                 <span class="cart_text1 "> The Total: </span> <span class="cart_text2">  {{sum}} USD
                     <hr>
-                <input type="button" value="Delete Cart" ng-click="deleteCart()">
+                <input class="cart_delete" style="margin-left: 35%;" type="button" value="Delete Cart" ng-click="deleteCart()">
                 <!-- method="post" -->
             </div>
             <div class="col-md-7 ">
